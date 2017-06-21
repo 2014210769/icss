@@ -43,7 +43,6 @@ public class UserController {
 
         return JSONArray.toJSON(jsonObject).toString();
     }
-
     /**
      * 批量删除
      * @param ids
