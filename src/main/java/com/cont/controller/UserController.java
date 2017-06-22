@@ -24,6 +24,8 @@ public class UserController {
     private UserService userService;
 //sdfsd
     
+    
+    
 //@RequestParam(value="ids",required=false) String ids
     @ResponseBody
     @RequestMapping("/login")
