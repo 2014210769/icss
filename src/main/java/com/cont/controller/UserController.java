@@ -28,9 +28,6 @@ public class UserController {
     public APIRestResponse login(HttpServletRequest request) {
     	String uname = request.getParameter("uname");
     	String pass = request.getParameter("pass");
-    	
-    	
-    	
     	List<UserModel> userList = userService.userLogin(uname,pass);
     	if(userList!=null && userList.size()>0){
     		UserModel userInfo = userList.get(0);
