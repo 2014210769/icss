@@ -21,11 +21,7 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
     @Autowired
-    private UserService userService;
-//sdfsd
-    
-    
-    
+    private UserService userService;   
 //@RequestParam(value="ids",required=false) String ids
     @ResponseBody
     @RequestMapping("/login")
