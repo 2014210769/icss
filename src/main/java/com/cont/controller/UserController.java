@@ -22,7 +22,7 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserService userService;
-
+//sdfsd
 //@RequestParam(value="ids",required=false) String ids
     @ResponseBody
     @RequestMapping("/login")
