@@ -15,9 +15,7 @@
     <link href="css/login.css" rel="stylesheet">
     <!-- jquery -->
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script>
-    	
-    </script>
+
 </head>
 
 <body>
@@ -33,10 +31,10 @@
                         <form role="form">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="用户名或手机号码" name="username" type="text" autofocus>
+                                    <input class="form-control" id = "username" placeholder="用户名或手机号码" name="username" type="text" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="密码" name="password" type="password" value="">
+                                    <input class="form-control" id = "passwod" placeholder="密码" name="password" type="password" value="">
                                 </div>
                                 <div class="checkbox">
                                     <label>
@@ -52,6 +50,35 @@
             </div>
         </div>
     </div>
+        <script>
     
+    	function login(){
+    		//取用户名
+    		var username = $("#username").val();
+    		
+    		//取密码
+    		var password = $("#passwod").val();
+    		//ajax验证
+    		//jquery,$.post(),$.get(),$.ajax()
+    		$.ajax({
+    			url:"Api/user/login",//后台接收的地址
+    			type:"post",
+    			data:{uname:username,pass:password},//传向后台的参数
+    			dataType:"json",//text,xml,html,script
+    			success:function(data){//data是指后台响应回来的数据它的数据格式取决于dataType
+    				if(data.success==true){
+    					alert("登录成功");
+    					location.href = "main.jsp";
+    				}else{
+    					alert("用户名和密码不对");
+    				}
+    				//console.log(data);
+    			},
+    			error:function(){
+    				alert("出错了，请联系管理员");
+    			}
+    		});
+    	}
+    </script>
 </body>
 </html>

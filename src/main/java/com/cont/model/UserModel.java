@@ -4,80 +4,77 @@ import com.cont.utils.SuperModel;
  * Created by lq on 2017/5/18.
  */
 public class UserModel extends SuperModel {
-
-    private String pk_user;
-    private String pk_role;
-    private String pk_staff;
-    private String user_code;
-    private String user_name;
-    private String password;
-
-    private String oldpwd;
-
-    //冗余字段
-    private String role_name;
-
-    public String getOldpwd() {
-        return oldpwd;
-    }
-
-    public void setOldpwd(String oldpwd) {
-        this.oldpwd = oldpwd;
-    }
-
-    public String getPk_staff() {
-        return pk_staff;
-    }
-
-    public void setPk_staff(String pk_staff) {
-        this.pk_staff = pk_staff;
-    }
-
-    public String getRole_name() {
-        return role_name;
-    }
-
-    public void setRole_name(String role_name) {
-        this.role_name = role_name;
-    }
-
-    public String getPk_user() {
-        return pk_user;
-    }
-
-    public void setPk_user(String pk_user) {
-        this.pk_user = pk_user;
-    }
-
-    public String getPk_role() {
-        return pk_role;
-    }
-
-    public void setPk_role(String pk_role) {
-        this.pk_role = pk_role;
-    }
-
-    public String getUser_code() {
-        return user_code;
-    }
-
-    public void setUser_code(String user_code) {
-        this.user_code = user_code;
-    }
-
-    public String getUser_name() {
-        return user_name;
-    }
-
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	private long id;
+	private String  u_name;
+	private String  u_cname;
+	private String  u_password;
+	private int  u_gender;
+	private long  u_role_id;
+	private String  u_phone;
+	private String  u_address;
+	private int  u_status;
+	private String  ceate_time;
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getU_name() {
+		return u_name;
+	}
+	public void setU_name(String u_name) {
+		this.u_name = u_name;
+	}
+	public String getU_cname() {
+		return u_cname;
+	}
+	public void setU_cname(String u_cname) {
+		this.u_cname = u_cname;
+	}
+	public String getU_password() {
+		return u_password;
+	}
+	public void setU_password(String u_password) {
+		this.u_password = u_password;
+	}
+	public int getU_gender() {
+		return u_gender;
+	}
+	public void setU_gender(int u_gender) {
+		this.u_gender = u_gender;
+	}
+	public long getU_role_id() {
+		return u_role_id;
+	}
+	public void setU_role_id(long u_role_id) {
+		this.u_role_id = u_role_id;
+	}
+	public String getU_phone() {
+		return u_phone;
+	}
+	public void setU_phone(String u_phone) {
+		this.u_phone = u_phone;
+	}
+	public String getU_address() {
+		return u_address;
+	}
+	public void setU_address(String u_address) {
+		this.u_address = u_address;
+	}
+	public int getU_status() {
+		return u_status;
+	}
+	public void setU_status(int u_status) {
+		this.u_status = u_status;
+	}
+	public String getCeate_time() {
+		return ceate_time;
+	}
+	public void setCeate_time(String ceate_time) {
+		this.ceate_time = ceate_time;
+	}
+	
+	
 }
