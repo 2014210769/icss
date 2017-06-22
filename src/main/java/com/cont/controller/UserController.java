@@ -1,22 +1,17 @@
 package com.cont.controller;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.cont.model.UserModel;
 import com.cont.service.UserService;
 import com.cont.utils.APIRestResponse;
 import com.cont.utils.ResponseUtils;
 import com.cont.utils.RestOperateCode;
-import com.cont.utils.StatusCodeConstants;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -28,7 +23,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
+//@RequestParam(value="ids",required=false) String ids
     @ResponseBody
     @RequestMapping("/login")
     public APIRestResponse login(HttpServletRequest request) {
